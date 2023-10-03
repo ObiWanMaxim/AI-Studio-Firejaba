@@ -9,9 +9,9 @@ export async function POST(req: Request) {
     ServerId: <string>process.env.SERVER_ID,
     ChannelId: <string>process.env.CHANNEL_ID,
     SalaiToken: <string>process.env.SALAI_TOKEN,
-    Ws: process.env.WS === "false",
+    Ws: true
   });
-  await client.Connect();
+  await client.init();
   const encoder = new TextEncoder();
   const readable = new ReadableStream({
     start(controller) {
