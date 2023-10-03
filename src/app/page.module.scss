@@ -1,0 +1,329 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  padding-top: 70px;
+  justify-content: center;
+  
+  .chatres {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 700px;
+
+    .chatcomponent{
+      width: 100%;
+    }
+    .hello{
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      max-width: 70%;
+      margin: 5px 17px;
+      float: left;
+      animation: show 0.3s forwards;
+
+      .topcontnet{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          justify-content: flex-end;
+          font-weight: bold;
+          font-size: 13px;
+          margin-bottom: 2px;
+          .icon{
+              width: 15px;
+              height: 15px;
+          }
+        }
+      }
+    }
+  
+  
+  .bar {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    min-height: 45px;
+    width: 100%;
+    color: white;
+    z-index: 99999;
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    direction: ltr;
+    .inputs {
+      display: flex;
+        gap: 10px;
+        width: 90%;
+        max-width: 700px;
+
+      textarea{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+        font-size: 17px;
+        outline: white 1px solid;
+        padding: 5px 10px;
+        max-width: 90%;
+        text-align: right;
+        border: none;
+        direction: rtl;
+        background-color: rgba(255, 255, 255, 0.452);
+        transition: 0.2s;
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.7);
+          font-size: 15px;
+          text-align: right;
+
+        }
+    
+      }
+
+      .submit {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border: none;
+        padding: 5px;
+        width: 20%;
+        border-radius: 20px;
+        &:focus,
+        &:active,
+        &:focus-visible,
+        &:hover {
+   
+        }
+      }
+
+    }
+
+    .wait {
+      .loading {
+   
+      }
+    }
+  }
+
+  
+}
+
+
+@keyframes show {
+  0% {
+      scale: 00;
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translateX(0);
+
+  }
+
+
+}
+
+
+@keyframes load {
+  0% {
+    rotate: 0deg;
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+    rotate: 360deg;
+  }
+}
+
+
+
+
+.req{
+  max-width: 70%;
+  width: fit-content;
+  align-items: flex-start;
+  min-width: 30%;
+  margin: 5px 17px;
+  margin-left: 100%;
+  float: right;
+  position: relative;
+  animation: showme 0.3s forwards;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  .topcontnet{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 2px;
+      .icon{
+          width: 15px;
+          height: 15px;
+      }
+  }
+}
+.present{
+  max-width: 70%;
+  align-items: flex-start;
+  min-width: 30%;
+  margin: 5px 17px;
+  margin-right: 100%;
+  float: left;
+  width: auto;
+
+  position: relative;
+  animation: show 0.3s forwards;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  .topcontnet{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 2px;
+      width: 100%;
+      justify-content: flex-end;
+      .icon{
+          width: 15px;
+          height: 15px;
+      }
+  }
+  .contnet{
+      font-size: 20px;
+      font-weight: bold;
+  }
+}
+.res{
+width: 75%;
+align-items: flex-start;
+margin: 5px 17px;
+float: left;
+position: relative;
+animation: show 0.3s  forwards;
+scale: 0;
+opacity: 0;
+transform: translateX(-100%);
+.chatimage{
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  border-radius: 10px;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  .topcontnet{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      justify-content: flex-end;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 2px;
+      .icon{
+          width: 15px;
+          height: 15px;
+      }
+  }
+  img{
+      width: 100%;
+      height: auto; 
+      border-radius: 10px;
+ 
+  }
+
+
+
+}
+.download{
+  padding: 0;
+  margin: -35px auto 10px auto;
+  color: white;
+  width: 50%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  }  
+
+}
+
+@keyframes show {
+  0% {
+      scale: 0;
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translateX(0);
+
+  }
+
+
+}
+@keyframes showme {
+  0% {
+      scale: 0;
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translateX(0);
+
+  }
+
+
+}
+
