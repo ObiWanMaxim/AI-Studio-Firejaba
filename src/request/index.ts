@@ -7,6 +7,7 @@ const streamFetch = async (
 ) => {
   const response = await fetch(url, {
     method: "POST",
+    signal: Timeout().signal,
     headers: {
       "Content-type": "application/json",
     },
@@ -55,4 +56,9 @@ const streamFetch = async (
 
 export const Imagine = (body: string, loading?: (uri: MJMessage) => void) => {
   return streamFetch("api/imagine/", body, loading);
+};
+export const Timeout = () => {
+  let controller = new AbortController();
+  setTimeout(() => controller.abort(), 36 * 1000);
+  return controller;
 };
